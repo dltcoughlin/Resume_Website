@@ -17,4 +17,5 @@ def workEd(request):
     return render(request, 'wh_ed_page.html')
     
 def contact(request):
+    #pull contacts in database
     return render(request, 'contact_info_page.html')
