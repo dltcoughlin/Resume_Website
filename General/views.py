@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
+
+def chatbotResponse(request):
+    data ='test_input'
+    if request.is_ajax():
+        return JsonResponse(data, safe=False)
 # Create your views here.
 def landing_page(request):
     return render(request, 'landing_page.html')
@@ -12,6 +18,9 @@ def tictactoe(request):
  
 def aStar(request):
     return render(request, 'astar_page.html')
+
+def chatbot(request):
+    return render(request, 'chatbot_page.html')
     
 def workEd(request):
     return render(request, 'wh_ed_page.html')

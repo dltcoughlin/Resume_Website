@@ -9,4 +9,6 @@ urlpatterns = [
     path('tictactoe', views.tictactoe, name='tictactoe'),
     path('contact', views.contact, name='contact'),
     path('aStar', views.aStar, name='aStar'),
+    path('chatbot', views.chatbot, name='chatbot'),
+    path('chatbotResponse', views.chatbotResponse, name='chatbotResponse'),
 ]
