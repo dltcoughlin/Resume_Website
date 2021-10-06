@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
+import projects.ChatbotProject.ChatbotResponse as chatbotReturn
+
 
 def chatbotResponse(request):
-    data ='test_input'
+    input = request.GET.get('text')
+    data = chatbotReturn.chatbot_response(input)
     if request.is_ajax():
         return JsonResponse(data, safe=False)
 # Create your views here.

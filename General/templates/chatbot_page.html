@@ -302,13 +302,14 @@ textarea {
 <html lang="en">
 <div class="page-content page-container" id="page-content">
     <div class="padding">
-        <div class="row container d-flex justify-content-center">
+        <div class="row container d-flex">
             <div class="col-md-6">
                 <div class="card card-bordered">
                     <div class="card-header">
                         <h4 class="card-title"><strong>Chat</strong></h4>
                     </div>
                     <div id="chatbox" class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
+                        <div class="media media-chat"> <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="..."><div class="media-body"><p>Hello! This chatbot is used to ask questions about Dalton. You can ask about Dalton's School, Work, Age, Hobbies, and Location</p></div></div>
                     </div>
                     <div class="publisher bt-1 border-light"> <input id = "inputText" class="publisher-input" type="text" placeholder="Write something">  <button id='submit' class="publisher-btn text-info" ><i class="fa fa-paper-plane"></i></button> </div>
                 </div>
@@ -335,6 +336,7 @@ $("#submit").click(function(){
         },
     }).responseText;
     $("#chatbox").append( "<div class='media media-chat'> <img class='avatar' src='https://img.icons8.com/color/36/000000/administrator-male.png' alt='...'><div class='media-body'><p>" + output + "</p></div></div>");
+    $("#chatbox").stop().animate({ scrollTop: $("#chatbox")[0].scrollHeight}, 1000);
 });
 </script>
 
