@@ -1,0 +1,40 @@
+{% include "base.html" %}
+
+{% block content %}
+<style>
+    input{
+    float:right;
+    }
+    textarea{
+    float:right;
+    }
+
+</style>
+<form action="/resumebuilder" method="POST" id="resumeInfo">
+    {% csrf_token %}
+    <table>
+
+    <tr><td><h3>General Information</h3></td></tr>
+    <tr><td><label>Name:</label><input name="Name"></input></td></tr>
+    <tr><td><label>Address:</label><input name="Address"></input></td></tr>
+    <tr><td><label>State:</label><input name="State"></input></td></tr>
+    <tr><td><label>Zip Code:</label><input name="ZipCode"></input></td></tr>
+    <tr><td><label>Phone Number:</label><input name="PhoneNumber"></input></td></tr>
+    <tr><td><label>Description:</label><textarea name="description"></textarea></td></tr>
+    <tr><td><h3>Work Experience</h3></td></tr>
+    <div class="workField">
+        <tr><td><label>Company Name:</label><input name="CompanyName[]"></input></td></tr>
+        <tr><td><label>Company Address:</label><input name="CompanyAddress[]"></input></td></tr>
+        <tr><td><label>Company State:</label><input name="CompanyState[]"></input></td></tr>
+        <tr><td><label>Company Zip Code:</label><input name="CompanyZipCode[]"></input></td></tr>
+        <tr><td><label>Company Phone Number:</label><input name="CompanyPhoneNumber[]"></input></td></tr>
+        <tr><td><label>Responabilities:</label><textarea name="companyResponabilties[]"></textarea></td></tr>
+    </div>
+    <tr><td><h3>Education</h3></td></tr>
+
+    <tr><td><h3>Skills</h3></td></tr>
+
+    <tr><td><button>Submit</button></td></tr>
+            </table>
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{"intents": [
+		{"tag": "questions",
+         "patterns": ["Question", "What can I ask", "hello"],
+         "responses": ["You can ask about Dalton's School, Work, Age, Hobbies, and Location"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "age",
+         "patterns": ["age", "born"],
+         "responses": ["Dalton is 27 years old. Born in 1994."]
+        },
+        {"tag": "work",
+         "patterns": ["work", "experience"],
+         "responses": ["Dalton is currently a Systems Engineer as Omega Systems. Previous he worked at Fox Group Inc. as a Data Processor and a Web Developer. Before that he was an Assistant Manager at AMC."]
+        },
+		{"tag": "school",
+         "patterns": ["school", "college"],
+         "responses": ["Dalton is currently attending University of Maryland for his bachelor's degree in Computer Science. He previously gradated from Reading Area Community College with an associte's degree."]
+        },
+		{"tag": "hobbies",
+         "patterns": ["hobby", "free time"],
+         "responses": ["Dalton likes to build projects on his free time. He also enjoys 3d printing. On the weekends he spends time with his dogs and his friends playing DND."]
+        },
+		{"tag": "location",
+         "patterns": ["location", "city"],
+         "responses": ["Dalton currently is located in Macungie, PA. He is willing to relocate or commute."]
+        }
+   ]
+}
