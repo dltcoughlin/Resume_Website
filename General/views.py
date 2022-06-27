@@ -49,7 +49,7 @@ def WeatherApp(request):
     return render(request, 'weather_app.html')
 
 def WeatherAppRequest(request):
-    apiKey = "667f94fa87425eaae30033d2e408caf0"
+    apiKey = ""
     zipCode = request.GET.get('text')
     baseUrl = "http://api.openweathermap.org/data/2.5/weather?"
     fullUrl = baseUrl + "appid=" + apiKey + "&zip=" + zipCode + '&units=imperial'
